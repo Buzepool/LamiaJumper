@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     //Controle da lógica de pulo
     private bool IsJumping;
     private bool DoubleJumping;
+    float movement;
 
     void Start()
     {
@@ -24,18 +25,17 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    {   //pega o input do teclado e faz o movimento usand o rigibody multiplicando a velocidade definida pelo eixo
+        movement = Input.GetAxis("Horizontal");
         CheckGround();
-        Move();
+        
         Jump();
     }
-
-    void Move()
-    {   //pega o input do teclado e faz o movimento usand o rigibody multiplicando a velocidade definida pelo eixo
-        float movement = Input.GetAxis("Horizontal");
-        rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
+    private void FixedUpdate()
+    {
         /*Só a lógica de andar normal, quando foi < que 0f é pq ele está andando pra esquerda então no vector 3 ( x,y,z) altera y pra 180 que faz o player virar
         se não ouver movimento walk fica como false daí ele n fica parado com animação de andar*/
+        rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
         if (movement > 0f)
         {
             Anim.SetBool("walk", true);
@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
             Anim.SetBool("walk", false);
         }
     }
+
+   
 
     void CheckGround()
     {
@@ -100,7 +102,7 @@ public class Player : MonoBehaviour
         // Basicamente pega que quando entrar em colisão 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            // O estado de IsJumping e DoubleJumping agora são atualizados no CheckGround
+            
         }
         // Basicamente pega que quando entrar em colisão com alguns desses objetos que possuem essas tags o player é destruido e mostra o gameOver
         else if (collision.gameObject.CompareTag("Spike") || collision.gameObject.CompareTag("Saw") || collision.gameObject.CompareTag("Bloco"))
