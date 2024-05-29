@@ -1,6 +1,6 @@
 ![Desktop2024 05 29-11 58 51 01-ezgif com-crop](https://github.com/Buzepool/LamiaJumper/assets/94470731/a15244ef-c7c4-4573-b40c-6dbf21ac19fe)
 
-## Olá, este é o meu primeiro projeto na unity, o fiz para conclusão de Bootcamp, é bastante simples, mas deu para usar praticamente tudo que aprendi no curso da própria unity, aqui está um link que para o jogo, não é nescessário dowload, ele está hospedado na ITCH.IO! [Ninja Toad: Five Trials](https://buzepool.itch.io/ninja-toad-five-trials), são um total de 5 fases de plataforma onde se deve passar com o sapo ninja por todos os desafios, aproveite!.
+## Olá, este é o meu primeiro projeto na unity, o fiz para conclusão de Bootcamp, é bastante simples, mas deu para usar praticamente tudo que aprendi no curso da própria unity, aqui está um link que leva para o jogo, não é nescessário dowload, ele está hospedado na ITCH.IO! [Ninja Toad: Five Trials](https://buzepool.itch.io/ninja-toad-five-trials), são um total de 5 fases de plataforma onde se deve passar com o sapo ninja por todos os desafios, aproveite!.
 
 ## Materiais
 
