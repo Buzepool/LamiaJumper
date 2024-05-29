@@ -36,4 +36,4 @@
 ##Tools
 >+ Unity 2022.3.8f1 LTS
 >+ Canva
->+ TextStudio Pixel Logo
+>+ [TextStudio](https://pt.textstudio.com/logo/41/pixel)
