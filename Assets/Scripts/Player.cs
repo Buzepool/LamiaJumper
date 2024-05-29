@@ -9,13 +9,14 @@ public class Player : MonoBehaviour
     public float JumpForce;
     private Rigidbody2D rig;
     private Animator Anim;
-    //Pra verificar quando o personagem tá no chão e ele poder pular denovo sem delay
+    // Para verificar quando o personagem está no chão e ele poder pular de novo sem delay
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
     //Controle da lógica de pulo
     private bool IsJumping;
     private bool DoubleJumping;
+    private bool DoubleJumpUsed;
     float movement;
 
     void Start()
@@ -52,24 +53,23 @@ public class Player : MonoBehaviour
         }
     }
 
-   
+
 
     void CheckGround()
     {
-        bool wasJumping = IsJumping; // Armazena o estado anterior de IsJumping
+        bool wasJumping = IsJumping;
         IsJumping = !Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Se o player estava no chão e agora está no ar  ativa a animação de pulo
         if (IsJumping && !wasJumping)
         {
             Anim.SetBool("jump", true);
         }
 
-        // Se o player estava no ar e agora está no chão desativa as animações de pulo e pulo duplo
         if (!IsJumping && wasJumping)
         {
             Anim.SetBool("jump", false);
             Anim.SetBool("DoubleJump", false);
+            DoubleJumpUsed = false; // Resetar o pulo duplo ao tocar o chão
         }
     }
 
@@ -79,20 +79,18 @@ public class Player : MonoBehaviour
         {
             if (!IsJumping)
             {
-                // Primeiro pulo, só confere o impulso no rigidbody e ativa animação
                 rig.velocity = new Vector2(rig.velocity.x, 0f);
                 rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 IsJumping = true;
                 Anim.SetBool("jump", true);
                 DoubleJumping = true;
             }
-            else if (DoubleJumping)
+            else if (DoubleJumping && !DoubleJumpUsed)
             {
-                // Segundo pulo confere novamente o impulso e agora ativa a animação de double jump
                 rig.velocity = new Vector2(rig.velocity.x, 0f);
                 rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 Anim.SetBool("DoubleJump", true);
-                DoubleJumping = false;
+                DoubleJumpUsed = true; // Marcar o pulo duplo como usado
             }
         }
     }

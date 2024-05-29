@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  JumpForce: 11
+  JumpForce: 8
   groundCheck: {fileID: 2649229589324306144}
-  groundCheckRadius: 0.3
+  groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -177,7 +177,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 3cd44be4c576f094c9863d61250ee881, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
