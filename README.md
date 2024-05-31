@@ -13,7 +13,7 @@
 >+ https://assetstore.unity.com/packages/2d/characters/pixel-adventure-2-155418
 >+ https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
 >
-##Ferramentas 
+## Ferramentas 
 
 >+ Unity 2022.3.8f1 LTS
 >+ [Canvas](https://www.canva.com)
@@ -24,16 +24,16 @@
 
 ## Materials
 
-##Soundtrack
+## Soundtrack
 
 >+ 8 bit game loop 012 simple mix 2 short 120 bpm.wav by josefpres -- [FreeSound](https://freesound.org/s/658334/)  -- License: Creative Commons 0
 >+ Jingle_Win_00.wav by LittleRobotSoundFactory -- [FreeSound](https://freesound.org/s/270528/) -- License: Attribution 4.0
 
-##Assets
+## Assets
 >+ Pixel Adventure 2
 >+ Pixel Adventure 1
 
-##Tools
+## Tools
 >+ Unity 2022.3.8f1 LTS
 >+ Canva
 >+ [TextStudio](https://pt.textstudio.com/logo/41/pixel)
